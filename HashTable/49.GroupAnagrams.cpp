@@ -6,7 +6,7 @@ public:
      * @return A list of lists, where each inner list contains a group of anagrams.
      */
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        // string->string where key is the sorted string and value is unsorted ones
+        // string -> string where key is the sorted string and value is unsorted ones
         unordered_map<string, vector<string>> groups;  
         for (const string& s : strs){
             string key = s; 

@@ -20,7 +20,8 @@ public:
         }
         
         for (char ch : t){
-            // if t has a word not in s or t has more same character than s
+            // if t has a word not in s 
+			// or t has more same character than s
             if (map.find(ch) == map.end() || map[ch] == 0){
                 return false;
             }
