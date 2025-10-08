@@ -13,7 +13,7 @@ public:
         
         // Use an unordered_map to store the frequency of characters in string s.
         // Key: character (char), Value: frequency (int).
-        std::unordered_map <char, int> map;
+        unordered_map <char, int> map;
         
         for (char ch : s){
             map[ch] += 1;
