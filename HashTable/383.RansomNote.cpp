@@ -7,7 +7,7 @@ public:
         for (char c : ransomNote) {
             cnt[c]++;
         }
-        
+        // Compare with magazine
         for (char m : magazine){
             if (cnt[m]>0) cnt[m] -= 1;
         }
