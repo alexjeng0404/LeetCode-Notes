@@ -1,3 +1,4 @@
+// ref:https://medium.com/leetcode-%E6%BC%94%E7%AE%97%E6%B3%95%E6%95%99%E5%AD%B8/035-leetcode-76%E6%BC%94%E7%AE%97%E6%B3%95-minimum-window-substring-%E6%9C%80%E5%B0%8F%E7%AA%97%E5%8F%A3%E5%AD%90%E5%AD%97%E4%B8%B2-6513c9ef03f4
 class Solution {
 public:
     string minWindow(string s, string t) {
@@ -28,8 +29,15 @@ public:
                 }
                 
                 // Move left pointer and adjust counts
-                if (++cnt[s[j++]] > 0) {
-                    total++;
+                // get j position
+                char currentChar = s[j];
+                j += 1;
+
+                // add 1 to currentChar
+                cnt[currentChar] = cnt[currentChar] + 1;
+                int newCount = cnt[currentChar];
+                if (newCount > 0) {
+                    total = total + 1;
                 }
             }
         }
